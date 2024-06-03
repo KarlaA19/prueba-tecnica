@@ -1,0 +1,143 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family:cursive;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/006/696/210/non_2x/set-of-fast-food-and-beverage-in-cartoon-style-vector.jpg);
+    
+    
+}
+.agregar
+{
+    align-items: center;
+    padding: 20px 30px;
+    width: 300px;
+    height: 600px;
+   
+    border-radius: 50px;
+    background: rgba(238, 120, 10, 0.822);
+    border: 1px solid rgba(184, 12, 12, 0.932);
+}
+.agregar .form
+{
+    padding: 10px 10px;
+}
+.agregar .form h1
+{
+    text-align: center;
+    
+}
+.agregar .form form
+{
+    margin-top: 50px;
+    align-items: center;
+}
+.agregar .form form .campo input
+{
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #12151e;
+    margin-bottom: 20px;
+    
+}
+
+.agregar .form form .campo select
+{
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #12151e;
+    margin-bottom: 30px;
+   
+}
+.agregar .form form .campo span
+{
+    position: absolute;
+    transform: translateY(-80px);
+    font-size: 14px;
+    color: #fff;
+}
+
+.agregar .form form .button
+{
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 30%;
+    background: #644305;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+
+
+
+    .mostrar
+{
+    float: right;
+    align-items: center;
+    padding: 20px 30px;
+    width: 300px;
+    height: 600px;
+    border-radius: 50px;
+    background: rgba(138, 228, 120, 0.822);
+    border: 1px solid rgba(52, 184, 12, 0.932);
+}
+.mostrar .form
+{
+    padding: 10px 10px;
+    
+}
+.mostrar .form h2
+{
+    text-align: center;
+    
+}
+.mostrar .form form
+{
+    margin-top: 50px;
+    align-items: center;
+}
+.mostrar .form form .campo input
+{
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #12151e;
+    margin-bottom: 20px;
+    
+}
+
+.mostrar .form form .campo select
+{
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #12151e;
+    margin-bottom: 30px;
+   
+}
+.mostrar .form form .campo span
+{
+    position: absolute;
+    transform: translateY(-80px);
+    font-size: 14px;
+    color: #fff;
+}
+.mostrar .form form .button
+{
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 30%;
+    background: #086405;
+    cursor: pointer;
+    font-size: 16px;
+    
+}

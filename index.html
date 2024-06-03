@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+        <title>Delicioso</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="agregar">
+            <div class="form">
+                <h1>Comida Rapida</h1>
+                <form>
+                    <div class="campo">
+                        <input type="text" value="" id="platillo" required=" ">
+                        <span>Nombre del platillo</span>
+                    </div>
+                    <div class="campo">
+                        <input type="decimal" value="" id="precio" required=" ">
+                        <span>Precio</span>
+                    </div>
+                    <div class="campo">
+                        <input type="text" value="" id="descripcion" required=" ">
+                        <span>Coloca alguna Descripción</span>
+                        
+                    </div>
+                    <div class="campo">
+                        
+                         <select>  
+                            
+                            <option value="" id="categoria" disabled selected="" required=" ">Seleccione </option>
+                            
+                            <option>snacks</option>
+                            <option>Hamburguesa</option>
+                            <option>Hot Dogs</option>
+                            <option>bebidas</option>
+                            <option>otros</option>
+                        </select>
+                        <p> </p>
+                        <span>Categoria</span>
+                    </div>
+                   
+                    <div class="campo">
+                        <input type="text" value="" id="ingredientes" required=" ">
+                        <span>Ingredientes</span>
+                    </div>
+                    
+                    <input type="submit" value="AGREGAR" class="button" id="submit">
+                </form>
+            </div>
+        </div>
+
+
+
+
+        <div class="mostrar">
+            <div class="form">
+                <h2>Comida Rapida</h2>
+                <form>
+                    <div class="campo">
+                        <input type="text" value="" id="platillo" required=" ">
+                        <span>Nombre del platillo</span>
+                    </div>
+                    <div class="campo">
+                        <input type="decimal" value="" id="precio" required=" ">
+                        <span>Precio</span>
+                    </div>
+                    <div class="campo">
+                        <input type="text" value="" id="descripcion" required=" ">
+                        <span>Coloca alguna Descripción</span>
+                        
+                    </div>
+                    <div class="campo">
+                        
+                         <select>  
+                            
+                            <option value="" id="categoria" disabled selected="" required=" ">Seleccione </option>
+                            
+                            <option>snacks</option>
+                            <option>Hamburguesa</option>
+                            <option>Hot Dogs</option>
+                            <option>bebidas</option>
+                            <option>otros</option>
+                        </select>
+                        <p> </p>
+                        <span>Categoria</span>
+                    </div>
+                   
+                    <div class="campo">
+                        <input type="text" value="" id="ingredientes" required=" ">
+                        <span>Ingredientes</span>
+                    </div>
+                    
+                    <input type="submit" value="EDITAR" class="button" id="editar">
+                    <input type="submit" value="ELIMINAR" class="button" id="eliminar">
+                    
+                </form>
+            </div>
+        </div>
+      
+        </div>
+
+        
+
+
+
+
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDQU15Ry8TBYz8v1AtINJtDM3_oi_46Ea0",
+      authDomain: "prueba-tecnica-45d9c.firebaseapp.com",
+      databaseURL: "https://prueba-tecnica-45d9c-default-rtdb.firebaseio.com",
+      projectId: "prueba-tecnica-45d9c",
+      storageBucket: "prueba-tecnica-45d9c.appspot.com",
+      messagingSenderId: "316489266756",
+      appId: "1:316489266756:web:3dfae079d9c34f19f1ae11",
+      measurementId: "G-BSH47G5RPN"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    
+   //get ref to database services
+   const db = getDatabase(app);
+
+document.getElementById("submit").addEventListener('click', function(e){
+ e.preventDefault();
+ set(ref(db, 'platillos/' + document.getElementById("platillo").value),
+ {
+
+   platillo: document.getElementById("platillo").value,
+   precio: document.getElementById("precio").value,
+   descripcion: document.getElementById("descripcion").value,
+   categoria: document.getElementById("categoria").value,
+   ingredientes: document.getElementById("ingredientes").value
+
+
+
+ });
+   alert("PLATILLO GUARDADO");
+})
+  </script>
+
+
+
+    </body>
+</html>
